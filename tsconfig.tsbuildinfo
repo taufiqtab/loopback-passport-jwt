@@ -1373,7 +1373,7 @@
         "signature": "e31914a423de357d1c26f76845e9b9a04b9eb61f41e30d62ac896ad964dcabcd"
       },
       "./src/auth.ts": {
-        "version": "0967dcf8c07fc326fba5ec4b9793554df97770445d16d35c3fac40934e7f0b3b",
+        "version": "5b0f85ba0150d17b8ff50b6b2a9f1ce15dee4a736360c2107f2acc3310f1347a",
         "signature": "81d437a5bf49582797ec82e1dce98785609d46b320d59af23c5030ac396fa2e4"
       },
       "./src/application.ts": {
@@ -6846,10 +6846,18 @@
       "./src/models/user-role.model.ts",
       "./src/models/index.ts",
       "./src/datasources/local-mysql.datasource.config.json",
+      "./src/datasources/local-mysql.datasource.ts",
       "./src/datasources/index.ts",
+      "./src/repositories/role.repository.ts",
+      "./src/repositories/user-role.repository.ts",
+      "./src/repositories/user.repository.ts",
+      "./src/repositories/index.ts",
       "./node_modules/@types/passport-strategy/index.d.ts",
       "./node_modules/@types/jsonwebtoken/index.d.ts",
       "./node_modules/@types/passport-jwt/index.d.ts",
+      "./src/application.ts",
+      "./src/index.ts",
+      "./src/migrate.ts",
       "./node_modules/@types/cookiejar/index.d.ts",
       "./node_modules/@types/superagent/index.d.ts",
       "./node_modules/@types/supertest/index.d.ts",
@@ -6870,6 +6878,12 @@
       "./node_modules/@loopback/testlab/dist/validate-api-spec.d.ts",
       "./node_modules/@loopback/testlab/dist/index.d.ts",
       "./node_modules/@loopback/testlab/index.d.ts",
+      "./src/__tests__/acceptance/test-helper.ts",
+      "./src/__tests__/acceptance/home-page.acceptance.ts",
+      "./src/__tests__/acceptance/ping.controller.acceptance.ts",
+      "./src/controllers/ping.controller.ts",
+      "./src/controllers/user.controller.ts",
+      "./src/controllers/index.ts",
       "./node_modules/@types/debug/index.d.ts",
       "./node_modules/@types/eslint-visitor-keys/index.d.ts",
       "./node_modules/@types/fs-extra/index.d.ts",
@@ -6878,21 +6892,7 @@
       "./node_modules/@types/mocha/index.d.ts",
       "./node_modules/@types/on-finished/index.d.ts",
       "./node_modules/@types/type-is/index.d.ts",
-      "./src/datasources/local-mysql.datasource.ts",
-      "./src/repositories/role.repository.ts",
-      "./src/repositories/index.ts",
-      "./src/repositories/user-role.repository.ts",
-      "./src/repositories/user.repository.ts",
-      "./src/auth.ts",
-      "./src/application.ts",
-      "./src/index.ts",
-      "./src/migrate.ts",
-      "./src/__tests__/acceptance/test-helper.ts",
-      "./src/__tests__/acceptance/home-page.acceptance.ts",
-      "./src/__tests__/acceptance/ping.controller.acceptance.ts",
-      "./src/controllers/ping.controller.ts",
-      "./src/controllers/user.controller.ts",
-      "./src/controllers/index.ts"
+      "./src/auth.ts"
     ]
   },
   "version": "3.6.3"
