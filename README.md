@@ -1,3 +1,8 @@
-# lb4-jwt-role-based-auth-sample
+#Loopback 4 Auth Passport + Role
 
-[![LoopBack](https://github.com/strongloop/loopback-next/raw/master/docs/site/imgs/branding/Powered-by-LoopBack-Badge-(blue)-@2x.png)](http://loopback.io/)
+from this tutorial :
+https://medium.com/@iqbaldjulfri/role-based-authentication-with-jwt-in-loopback-4-4f9ab63daa52
+
+Modified :
+- Using Mysql Datasource
+- update Get Token from Header of Request
