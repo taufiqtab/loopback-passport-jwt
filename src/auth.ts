@@ -81,7 +81,7 @@ export class MyAuthMetadataProvider extends AuthMetadataProvider {
 
 // the JWT_secret to encrypt and decrypt JWT token
 export const JWT_SECRET = 'Erajaya!@#';
-export const EXP_DAY = 7;
+export const EXP_DAY = 1;
 
 // the required interface to filter login payload
 export interface Credentials {
