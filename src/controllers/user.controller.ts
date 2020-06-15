@@ -1,37 +1,40 @@
-import {post, requestBody, HttpErrors} from '@loopback/rest';
-import {User} from '../models';
-import {UserRepository, UserRoleRepository} from '../repositories';
-import {repository} from '@loopback/repository';
-import {Credentials, JWT_SECRET} from '../auth';
-import {promisify} from 'util';
+import { post, requestBody, HttpErrors } from '@loopback/rest';
+import { User } from '../models';
+import { UserRepository, UserRoleRepository } from '../repositories';
+import { repository } from '@loopback/repository';
+import { Credentials, JWT_SECRET } from '../auth';
+import { promisify } from 'util';
 
-const {sign} = require('jsonwebtoken');
+const { sign } = require('jsonwebtoken');
 const signAsync = promisify(sign);
 
 export class UserController {
   constructor(
     @repository(UserRepository) private userRepository: UserRepository,
     @repository(UserRoleRepository) private userRoleRepository: UserRoleRepository,
-  ) {}
+  ) { }
 
   @post('/users')
   async createUser(@requestBody() user: User): Promise<User> {
+    var md5 = require('md5');
+    user.password = md5(user.password);
     return await this.userRepository.create(user);
   }
 
   @post('/users/login')
   async login(@requestBody() credentials: Credentials) {
     if (!credentials.username || !credentials.password) throw new HttpErrors.BadRequest('Missing Username or Password');
-    const user = await this.userRepository.findOne({where: {id: credentials.username}});
+    const user = await this.userRepository.findOne({ where: { id: credentials.username } });
     if (!user) throw new HttpErrors.Unauthorized('Invalid credentials');
 
-    const isPasswordMatched = user.password === credentials.password;
+    var md5 = require('md5');
+    const isPasswordMatched = user.password === md5(credentials.password);
     if (!isPasswordMatched) throw new HttpErrors.Unauthorized('Invalid credentials');
 
-    const tokenObject = {username: credentials.username};
+    const tokenObject = { username: credentials.username };
     const token = await signAsync(tokenObject, JWT_SECRET);
-    const roles = await this.userRoleRepository.find({where: {userId: user.id}});
-    const {id, email} = user;
+    const roles = await this.userRoleRepository.find({ where: { userId: user.id } });
+    const { id, email } = user;
 
     return {
       token,
