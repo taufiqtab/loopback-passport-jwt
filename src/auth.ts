@@ -133,7 +133,6 @@ export class MyAuthAuthenticationStrategyProvider implements Provider<Authentica
     done: (err: Error | null, user?: UserProfile | false, info?: Object) => void,
   ) {
     try {
-      console.log(payload);
       const { username } = payload;
       const user = await this.userRepository.findById(username);
       if (!user) done(null, false);
