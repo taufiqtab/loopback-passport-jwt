@@ -7,6 +7,7 @@ https://medium.com/@iqbaldjulfri/role-based-authentication-with-jwt-in-loopback-
 - Using Mysql Datasource
 - update Get Token from Header of Request
 - Hash password in database (Encrypt)
+- token expiration time
 
 ## Result :
 - we can create new User

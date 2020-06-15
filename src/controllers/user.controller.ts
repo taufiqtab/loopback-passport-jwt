@@ -2,7 +2,7 @@ import { post, requestBody, HttpErrors } from '@loopback/rest';
 import { User } from '../models';
 import { UserRepository, UserRoleRepository } from '../repositories';
 import { repository } from '@loopback/repository';
-import { Credentials, JWT_SECRET } from '../auth';
+import { Credentials, JWT_SECRET, EXP_DAY } from '../auth';
 import { promisify } from 'util';
 
 const { sign } = require('jsonwebtoken');
@@ -31,7 +31,10 @@ export class UserController {
     const isPasswordMatched = user.password === md5(credentials.password);
     if (!isPasswordMatched) throw new HttpErrors.Unauthorized('Invalid credentials');
 
-    const tokenObject = { username: credentials.username };
+    var moment = require('moment');
+    var expDayEpoch = moment().add(EXP_DAY, "days").unix();
+
+    const tokenObject = { username: credentials.username, exp: expDayEpoch };
     const token = await signAsync(tokenObject, JWT_SECRET);
     const roles = await this.userRoleRepository.find({ where: { userId: user.id } });
     const { id, email } = user;

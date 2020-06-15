@@ -81,6 +81,7 @@ export class MyAuthMetadataProvider extends AuthMetadataProvider {
 
 // the JWT_secret to encrypt and decrypt JWT token
 export const JWT_SECRET = 'Erajaya!@#';
+export const EXP_DAY = 7;
 
 // the required interface to filter login payload
 export interface Credentials {
@@ -132,6 +133,7 @@ export class MyAuthAuthenticationStrategyProvider implements Provider<Authentica
     done: (err: Error | null, user?: UserProfile | false, info?: Object) => void,
   ) {
     try {
+      console.log(payload);
       const { username } = payload;
       const user = await this.userRepository.findById(username);
       if (!user) done(null, false);

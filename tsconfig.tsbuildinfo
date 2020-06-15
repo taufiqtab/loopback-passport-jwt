@@ -1373,8 +1373,8 @@
         "signature": "e31914a423de357d1c26f76845e9b9a04b9eb61f41e30d62ac896ad964dcabcd"
       },
       "./src/auth.ts": {
-        "version": "4244d0ec4af873a70d95d5e93acd2e0c7d3c75fa1ee932ca74ae859d854446a2",
-        "signature": "2d223f01e257b1c2911a8abde433a9269a89dd268b048ae8e04b813d9aebd4f0"
+        "version": "577b002448b4e64eeefd8aef9122059ed3a48192d979710a27e5825e83e52787",
+        "signature": "bd43704a84bd30c243673b8def844318da83eaefd2818ef83476353ef35333a1"
       },
       "./src/application.ts": {
         "version": "5ad8b2cc3b8b99040283a36d07cb898c357e1495418db90f5b76dede8f035848",
@@ -1485,7 +1485,7 @@
         "signature": "547512223e82e54ab6be008507a895f56b989c82c428565341afdc1ed1844719"
       },
       "./src/controllers/user.controller.ts": {
-        "version": "6afaa998c709490ef898cac41edf116164a168f6d06184c6a412dffb753b5cb7",
+        "version": "770885b5f2bf6e0de90309d428e05d58bfd3de35cd34b456074ec6ece5d53d2b",
         "signature": "fe53a9a83aef361e252e6fa4dae3532d2e927d2b9581ba16a090aafe8ed69dfc"
       },
       "./src/controllers/index.ts": {
@@ -7323,6 +7323,8 @@
       "./node_modules/@types/passport-strategy/index.d.ts",
       "./node_modules/@types/jsonwebtoken/index.d.ts",
       "./node_modules/@types/passport-jwt/index.d.ts",
+      "./src/auth.ts",
+      "./src/application.ts",
       "./src/index.ts",
       "./src/migrate.ts",
       "./node_modules/@types/cookiejar/index.d.ts",
@@ -7348,6 +7350,8 @@
       "./src/__tests__/acceptance/test-helper.ts",
       "./src/__tests__/acceptance/home-page.acceptance.ts",
       "./src/__tests__/acceptance/ping.controller.acceptance.ts",
+      "./src/controllers/ping.controller.ts",
+      "./src/controllers/index.ts",
       "./node_modules/@types/debug/index.d.ts",
       "./node_modules/@types/eslint-visitor-keys/index.d.ts",
       "./node_modules/@types/fs-extra/index.d.ts",
@@ -7369,11 +7373,7 @@
       "../../../node_modules/@types/lodash/ts3.1/common/string.d.ts",
       "../../../node_modules/@types/lodash/ts3.1/common/util.d.ts",
       "../../../node_modules/@types/lodash/ts3.1/index.d.ts",
-      "./src/auth.ts",
-      "./src/controllers/user.controller.ts",
-      "./src/controllers/ping.controller.ts",
-      "./src/application.ts",
-      "./src/controllers/index.ts"
+      "./src/controllers/user.controller.ts"
     ]
   },
   "version": "3.6.3"
