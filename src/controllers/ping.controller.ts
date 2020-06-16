@@ -71,20 +71,32 @@ export class PingController {
   }
 
   @get('/ping/has-any-role')
-  @secured(SecuredType.HAS_ANY_ROLE, ['ADMIN', 'ADMIN2'])
+  @secured(SecuredType.HAS_ANY_ROLE, [1, 2])
   testHasAnyRole() {
     return { message: 'hasAnyRole: OK' };
   }
 
   @get('/ping/has-roles')
-  @secured(SecuredType.HAS_ROLES, ['ADMIN', 'ADMIN2'])
+  @secured(SecuredType.HAS_ROLES, [1, 2])
   testHasRoles() {
     return { message: 'hasRoles: OK' };
   }
 
   @get('/ping/kirim-ulang')
-  @secured(SecuredType.HAS_ANY_ROLE, ['2', 'CSO'])
+  @secured(SecuredType.HAS_ANY_ROLE, [1, 2])
   kirimUlang() {
     return { message: 'Paket berhasil di kirim Ulang' };
+  }
+
+  @get('/ping/cso-only')
+  @secured(SecuredType.HAS_ANY_ROLE, [2])
+  CsoOnly() {
+    return { message: 'CSO only berhasil' };
+  }
+
+  @get('/ping/admin-only')
+  @secured(SecuredType.HAS_ANY_ROLE, [1])
+  AdminOnly() {
+    return { message: 'Admin only berhasil' };
   }
 }

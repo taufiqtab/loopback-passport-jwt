@@ -1322,12 +1322,12 @@
         "signature": "591c9b359b3667cf99beb84740050e699dfc27b0353e01d603e2a81d4c3936f4"
       },
       "./src/models/role.model.ts": {
-        "version": "8221fe35c1dc22c2aacd0129f825d8275070ae2ac692bc5f0b56c02d06f2c4f0",
-        "signature": "15565795ad0c6dbe4cde29dac542a839ebd81c0ad0d948b73732132c043c183a"
+        "version": "07eb0e4dbaca32577c7fe6381eb0d8b352d94672a3ed15a313b61db062bc15a3",
+        "signature": "6ac72c57049917081843f3eef0f3931a4e13c2b4172218cb672c192ccc22b46b"
       },
       "./src/models/user-role.model.ts": {
-        "version": "3fdc40e7e0a2ae294d4030f74ddd20f752846059f7dd21c1afb64178a1435534",
-        "signature": "a828c6a1d5dd0f8a73743d28966ab8594e7ae0584fdb42ce87ba175269f3582a"
+        "version": "a8268ded990e1593da911235f2a8bba7ae544b9950ff8e7f734ea32d202f20e2",
+        "signature": "ef01aa13f5b822b83c881ea4f90f33c10770aac5d42045ec86b92fccd94c5d77"
       },
       "./src/models/index.ts": {
         "version": "b4141033ff20989986efc4929bf65a54b8056f0acbcff3a3c430a24afb502d10",
@@ -1373,8 +1373,8 @@
         "signature": "e31914a423de357d1c26f76845e9b9a04b9eb61f41e30d62ac896ad964dcabcd"
       },
       "./src/auth.ts": {
-        "version": "06cad9ec8a04f14e7cb157c774743f52a47d58c2e17ddf685bb6e8f403a88b90",
-        "signature": "35ce8c53e0fd36cdb62cc8e3c7b9029359463c9e98da72f97e2db5690b84a5b6"
+        "version": "1d4f0c961031ddf34a617abb2302a315e066cfe12e3cfeb3c9fb6b8dbb10d2b9",
+        "signature": "ff54410e6bb68cd294b577e9ee7196e95c81bf8110e7b9627455d84489ef428a"
       },
       "./src/application.ts": {
         "version": "5ad8b2cc3b8b99040283a36d07cb898c357e1495418db90f5b76dede8f035848",
@@ -1481,12 +1481,12 @@
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       },
       "./src/controllers/ping.controller.ts": {
-        "version": "e4cbeb97e13e2dadd8ef50ee253709402557fd23b8813c53ed5ad5e09a0223e3",
-        "signature": "547512223e82e54ab6be008507a895f56b989c82c428565341afdc1ed1844719"
+        "version": "de310c07390532d2bb324fb4f89184d744ac96d62958e77c0a50009a1291efdb",
+        "signature": "c6ca14ba3c18f8b8a94d98e91e0aa1d388e35fde83c120cdf3e53c26729935a0"
       },
       "./src/controllers/user.controller.ts": {
         "version": "fd1a4175443a590702d5a5f659680b2d32891f90b72c46a2f276b3f9ab6c2e24",
-        "signature": "96af64a44f5e8f225b723ae25364459421eb65f91600b68319af5fe6838d502f"
+        "signature": "61ba77c780b9e17eca6c2b50e2faa38a27ca7765b9884161b1347080232cacca"
       },
       "./src/controllers/index.ts": {
         "version": "5ec36ce9ea78c447c316057d144730918accf07d6b18bb72390e1cf97da3fea6",
@@ -7309,12 +7309,22 @@
       "./node_modules/@loopback/authentication-passport/dist/strategy-adapter.d.ts",
       "./node_modules/@loopback/authentication-passport/dist/index.d.ts",
       "./node_modules/@loopback/authentication-passport/index.d.ts",
+      "./src/models/user.model.ts",
+      "./src/models/role.model.ts",
+      "./src/models/user-role.model.ts",
+      "./src/models/index.ts",
       "./src/datasources/local-mysql.datasource.config.json",
       "./src/datasources/local-mysql.datasource.ts",
       "./src/datasources/index.ts",
+      "./src/repositories/role.repository.ts",
+      "./src/repositories/user-role.repository.ts",
+      "./src/repositories/user.repository.ts",
+      "./src/repositories/index.ts",
       "./node_modules/@types/passport-strategy/index.d.ts",
       "./node_modules/@types/jsonwebtoken/index.d.ts",
       "./node_modules/@types/passport-jwt/index.d.ts",
+      "./src/auth.ts",
+      "./src/application.ts",
       "./src/index.ts",
       "./src/migrate.ts",
       "./node_modules/@types/cookiejar/index.d.ts",
@@ -7340,6 +7350,7 @@
       "./src/__tests__/acceptance/test-helper.ts",
       "./src/__tests__/acceptance/home-page.acceptance.ts",
       "./src/__tests__/acceptance/ping.controller.acceptance.ts",
+      "./src/controllers/user.controller.ts",
       "./node_modules/@types/debug/index.d.ts",
       "./node_modules/@types/eslint-visitor-keys/index.d.ts",
       "./node_modules/@types/fs-extra/index.d.ts",
@@ -7361,18 +7372,7 @@
       "../../../node_modules/@types/lodash/ts3.1/common/string.d.ts",
       "../../../node_modules/@types/lodash/ts3.1/common/util.d.ts",
       "../../../node_modules/@types/lodash/ts3.1/index.d.ts",
-      "./src/models/user.model.ts",
-      "./src/models/index.ts",
-      "./src/models/user-role.model.ts",
-      "./src/models/role.model.ts",
-      "./src/auth.ts",
       "./src/controllers/ping.controller.ts",
-      "./src/application.ts",
-      "./src/repositories/role.repository.ts",
-      "./src/repositories/user-role.repository.ts",
-      "./src/repositories/user.repository.ts",
-      "./src/repositories/index.ts",
-      "./src/controllers/user.controller.ts",
       "./src/controllers/index.ts"
     ]
   },

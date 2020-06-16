@@ -33,7 +33,7 @@ const dotenv = require('dotenv').config();
 // we will use 'secured' to match Spring Security annotation.
 export function secured(
   type: SecuredType = SecuredType.IS_AUTHENTICATED, // more on this below
-  roles: string[] = [],
+  roles: number[] = [],
   strategy: string = 'jwt',
   options?: object,
 ) {
@@ -58,7 +58,7 @@ export enum SecuredType {
 // extended interface of the default AuthenticationMetadata which only has `strategy` and `options`
 export interface MyAuthenticationMetadata extends AuthenticationMetadata {
   type: SecuredType;
-  roles: string[];
+  roles: number[];
 }
 
 // metadata provider for `MyAuthenticationMetadata`. Will supply method's metadata when injected
@@ -150,21 +150,20 @@ export class MyAuthAuthenticationStrategyProvider implements Provider<Authentica
   }
 
   // verify user's role based on the SecuredType
-  async verifyRoles(username: number) {
+  async verifyRoles(userid: number) {
     const { type, roles } = this.metadata;
-
     if ([SecuredType.IS_AUTHENTICATED, SecuredType.PERMIT_ALL].includes(type)) return;
 
     if (type === SecuredType.HAS_ANY_ROLE) {
       if (!roles.length) return;
       const { count } = await this.userRoleRepository.count({
-        userId: username,
+        userId: userid,
         roleId: { inq: roles },
       });
 
       if (count) return;
     } else if (type === SecuredType.HAS_ROLES && roles.length) {
-      const userRoles = await this.userRoleRepository.find({ where: { userId: username } });
+      const userRoles = await this.userRoleRepository.find({ where: { userId: userid } });
       const roleIds = userRoles.map(ur => ur.roleId);
       let valid = true;
       for (const role of roles)
