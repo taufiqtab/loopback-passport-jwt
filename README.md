@@ -44,9 +44,9 @@ https://medium.com/@iqbaldjulfri/role-based-authentication-with-jwt-in-loopback-
 
 ### 5. execute npm start
 ### 7. create .env in project root, and fill it with :
-JWT_SECRET=Erajaya!@#
-EXP_DAY=1
-PORT=8080
+-JWT_SECRET=yoursecretkey
+-EXP_DAY=1
+-PORT=8080
 
 ### 6. add some endpoint to postman / insomnia
 ### 7. hit /users endpoint to create new user
