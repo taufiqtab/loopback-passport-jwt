@@ -3,11 +3,12 @@
 ## from this tutorial :
 https://medium.com/@iqbaldjulfri/role-based-authentication-with-jwt-in-loopback-4-4f9ab63daa52
 
-## Modified :
+## Modified / Update :
 - Using Mysql Datasource
 - update Get Token from Header of Request
 - Hash password in database (Encrypt)
 - token expiration time
+- fix database structure (using int instead of varchar in every "id" field)
 
 ## Result :
 - we can create new User
@@ -16,7 +17,7 @@ https://medium.com/@iqbaldjulfri/role-based-authentication-with-jwt-in-loopback-
 - extract access_token from header request
 
 ## Things to be Done :
-- fix database structure (using int instead of varchar in every "id" field)
+-
 
 # How to use :
 
