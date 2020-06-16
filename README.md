@@ -27,11 +27,10 @@ https://medium.com/@iqbaldjulfri/role-based-authentication-with-jwt-in-loopback-
 ### 3. create new Mysql Database
 ### 4. Create 3 Table
 1. user
-| id       | int, primary key, autoincrement   |
-|----------|-----------------------------------|
-| name     | varchar, allow null, default null |
-| email    | varchar, allow null, default null |
-| password | varchar, required, no default     |
+- id (int, primary key, auto increment)
+- name (varchar, allow null, default null)
+- email (varchar, allow null, default null)
+- password (varchar, allow null, default null)
 
 2. role
 - id (int, primary key, auto increment)
