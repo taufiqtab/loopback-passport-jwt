@@ -14,7 +14,7 @@ export class Lb4JwtRoleBasedAuthSampleApplication extends BootMixin(ServiceMixin
   constructor(options: ApplicationConfig = {}) {
     super({
       rest: {
-        port: 8080,
+        port: process.env.PORT,
       },
     });
     // Set up the custom sequence
