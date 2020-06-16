@@ -52,3 +52,7 @@ https://medium.com/@iqbaldjulfri/role-based-authentication-with-jwt-in-loopback-
 ### 7. hit /users endpoint to create new user
 ### 8. hit /users/login endpoint with raw data username and passowrd to login and get token
 ### 9. add access_token to header for all "ping" endpoint to test the Auth and Role system
+
+## Developer Environment :
+- NodeJS v12.7.0
+- NPM 6.10.0
