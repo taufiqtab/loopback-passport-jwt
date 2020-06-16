@@ -1377,7 +1377,7 @@
         "signature": "ff54410e6bb68cd294b577e9ee7196e95c81bf8110e7b9627455d84489ef428a"
       },
       "./src/application.ts": {
-        "version": "5ad8b2cc3b8b99040283a36d07cb898c357e1495418db90f5b76dede8f035848",
+        "version": "b13224e475e857b1f590f1d18c52d536372d0f815cd71ccaa72914ad1cbdec82",
         "signature": "9b16353c85e99a128a91b264a0e6a7a63d85e1af34edb42e7e0f28dd9f84a07b"
       },
       "./src/index.ts": {
@@ -7350,7 +7350,9 @@
       "./src/__tests__/acceptance/test-helper.ts",
       "./src/__tests__/acceptance/home-page.acceptance.ts",
       "./src/__tests__/acceptance/ping.controller.acceptance.ts",
+      "./src/controllers/ping.controller.ts",
       "./src/controllers/user.controller.ts",
+      "./src/controllers/index.ts",
       "./node_modules/@types/debug/index.d.ts",
       "./node_modules/@types/eslint-visitor-keys/index.d.ts",
       "./node_modules/@types/fs-extra/index.d.ts",
@@ -7371,9 +7373,7 @@
       "../../../node_modules/@types/lodash/ts3.1/common/seq.d.ts",
       "../../../node_modules/@types/lodash/ts3.1/common/string.d.ts",
       "../../../node_modules/@types/lodash/ts3.1/common/util.d.ts",
-      "../../../node_modules/@types/lodash/ts3.1/index.d.ts",
-      "./src/controllers/ping.controller.ts",
-      "./src/controllers/index.ts"
+      "../../../node_modules/@types/lodash/ts3.1/index.d.ts"
     ]
   },
   "version": "3.6.3"

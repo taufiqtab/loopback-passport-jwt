@@ -12,8 +12,11 @@ import { UserRepository, RoleRepository, UserRoleRepository } from './repositori
 
 export class Lb4JwtRoleBasedAuthSampleApplication extends BootMixin(ServiceMixin(RepositoryMixin(RestApplication))) {
   constructor(options: ApplicationConfig = {}) {
-    super(options);
-
+    super({
+      rest: {
+        port: 8080,
+      },
+    });
     // Set up the custom sequence
     this.sequence(MySequence);
 
