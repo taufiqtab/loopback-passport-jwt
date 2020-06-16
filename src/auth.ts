@@ -27,6 +27,7 @@ import { HttpErrors, Request } from '@loopback/rest';
 
 export const JWT_STRATEGY_NAME = 'jwt';
 
+const dotenv = require('dotenv').config();
 // the decorator function, every required param has its own default
 // so we can supply empty param when calling this decorartor.
 // we will use 'secured' to match Spring Security annotation.
@@ -80,8 +81,8 @@ export class MyAuthMetadataProvider extends AuthMetadataProvider {
 }
 
 // the JWT_secret to encrypt and decrypt JWT token
-export const JWT_SECRET = 'Erajaya!@#';
-export const EXP_DAY = 1;
+export const JWT_SECRET = process.env.JWT_SECRET;
+export const EXP_DAY = process.env.EXP_DAY;
 
 // the required interface to filter login payload
 export interface Credentials {
