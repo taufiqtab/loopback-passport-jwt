@@ -86,7 +86,9 @@ export const EXP_DAY = process.env.EXP_DAY;
 
 // the required interface to filter login payload
 export interface Credentials {
-  username: string;
+  userid: number;
+  email: string;
+  user_name: string;
   password: string;
 }
 
@@ -134,13 +136,13 @@ export class MyAuthAuthenticationStrategyProvider implements Provider<Authentica
     done: (err: Error | null, user?: UserProfile | false, info?: Object) => void,
   ) {
     try {
-      const { username } = payload;
-      const user = await this.userRepository.findById(username);
+      const { userid } = payload;
+      const user = await this.userRepository.findById(userid);
       if (!user) done(null, false);
 
-      await this.verifyRoles(username);
+      await this.verifyRoles(userid);
 
-      done(null, { name: username, email: user.email, [securityId]: username });
+      done(null, { name: user.name, email: user.email, [securityId]: userid.toString() });
     } catch (err) {
       if (err.name === 'UnauthorizedError') done(null, false);
       done(err, false);
@@ -148,7 +150,7 @@ export class MyAuthAuthenticationStrategyProvider implements Provider<Authentica
   }
 
   // verify user's role based on the SecuredType
-  async verifyRoles(username: string) {
+  async verifyRoles(username: number) {
     const { type, roles } = this.metadata;
 
     if ([SecuredType.IS_AUTHENTICATED, SecuredType.PERMIT_ALL].includes(type)) return;

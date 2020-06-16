@@ -1318,16 +1318,16 @@
         "signature": "b488dca9a5be3cb9feeca1df38d497106e2c974f98dbf69e78f4fbd499bc3316"
       },
       "./src/models/user.model.ts": {
-        "version": "c40d49bd7bac80c5803a8e9cd2d39315de92842f9712070bc344b9de529fd13e",
-        "signature": "1ac8d7ceed315671b64e3019c193fc1a31ef867e44f92ab3fd04644749205882"
+        "version": "2147da4b8aa82836030e3dda4549536f964bac5c075b77e76c9e1a55eeede912",
+        "signature": "591c9b359b3667cf99beb84740050e699dfc27b0353e01d603e2a81d4c3936f4"
       },
       "./src/models/role.model.ts": {
-        "version": "1d6fdd313991517292402aa21e08029bd45cd01c881b9671aefbb7656973d6db",
+        "version": "8221fe35c1dc22c2aacd0129f825d8275070ae2ac692bc5f0b56c02d06f2c4f0",
         "signature": "15565795ad0c6dbe4cde29dac542a839ebd81c0ad0d948b73732132c043c183a"
       },
       "./src/models/user-role.model.ts": {
-        "version": "3b405e844b0cbbd2277bb9a25bd06478f1d0ee49a145acb03fd96b76052f28f9",
-        "signature": "24368e775c5a6b5dc7e2983ad1da5c2e16e3bb997d646138c04c5edc6804d7ca"
+        "version": "3fdc40e7e0a2ae294d4030f74ddd20f752846059f7dd21c1afb64178a1435534",
+        "signature": "a828c6a1d5dd0f8a73743d28966ab8594e7ae0584fdb42ce87ba175269f3582a"
       },
       "./src/models/index.ts": {
         "version": "b4141033ff20989986efc4929bf65a54b8056f0acbcff3a3c430a24afb502d10",
@@ -1373,8 +1373,8 @@
         "signature": "e31914a423de357d1c26f76845e9b9a04b9eb61f41e30d62ac896ad964dcabcd"
       },
       "./src/auth.ts": {
-        "version": "cfb92f0dc83b960c255ab1df48892f751d255e686875f1278d08c984307a623e",
-        "signature": "577ce3bea56c35c887e4b03b430a00a41ff152d7e0edaf078eaa14f8f2120492"
+        "version": "06cad9ec8a04f14e7cb157c774743f52a47d58c2e17ddf685bb6e8f403a88b90",
+        "signature": "35ce8c53e0fd36cdb62cc8e3c7b9029359463c9e98da72f97e2db5690b84a5b6"
       },
       "./src/application.ts": {
         "version": "5ad8b2cc3b8b99040283a36d07cb898c357e1495418db90f5b76dede8f035848",
@@ -1485,8 +1485,8 @@
         "signature": "547512223e82e54ab6be008507a895f56b989c82c428565341afdc1ed1844719"
       },
       "./src/controllers/user.controller.ts": {
-        "version": "8f4e26e8748424b8f987deeefdf003f8c40512eec209926ddcfb6d93a87768bd",
-        "signature": "fe53a9a83aef361e252e6fa4dae3532d2e927d2b9581ba16a090aafe8ed69dfc"
+        "version": "fd1a4175443a590702d5a5f659680b2d32891f90b72c46a2f276b3f9ab6c2e24",
+        "signature": "96af64a44f5e8f225b723ae25364459421eb65f91600b68319af5fe6838d502f"
       },
       "./src/controllers/index.ts": {
         "version": "5ec36ce9ea78c447c316057d144730918accf07d6b18bb72390e1cf97da3fea6",
@@ -7309,17 +7309,9 @@
       "./node_modules/@loopback/authentication-passport/dist/strategy-adapter.d.ts",
       "./node_modules/@loopback/authentication-passport/dist/index.d.ts",
       "./node_modules/@loopback/authentication-passport/index.d.ts",
-      "./src/models/user.model.ts",
-      "./src/models/role.model.ts",
-      "./src/models/user-role.model.ts",
-      "./src/models/index.ts",
       "./src/datasources/local-mysql.datasource.config.json",
       "./src/datasources/local-mysql.datasource.ts",
       "./src/datasources/index.ts",
-      "./src/repositories/role.repository.ts",
-      "./src/repositories/user-role.repository.ts",
-      "./src/repositories/user.repository.ts",
-      "./src/repositories/index.ts",
       "./node_modules/@types/passport-strategy/index.d.ts",
       "./node_modules/@types/jsonwebtoken/index.d.ts",
       "./node_modules/@types/passport-jwt/index.d.ts",
@@ -7369,10 +7361,18 @@
       "../../../node_modules/@types/lodash/ts3.1/common/string.d.ts",
       "../../../node_modules/@types/lodash/ts3.1/common/util.d.ts",
       "../../../node_modules/@types/lodash/ts3.1/index.d.ts",
+      "./src/models/user.model.ts",
+      "./src/models/index.ts",
+      "./src/models/user-role.model.ts",
+      "./src/models/role.model.ts",
       "./src/auth.ts",
-      "./src/controllers/user.controller.ts",
       "./src/controllers/ping.controller.ts",
       "./src/application.ts",
+      "./src/repositories/role.repository.ts",
+      "./src/repositories/user-role.repository.ts",
+      "./src/repositories/user.repository.ts",
+      "./src/repositories/index.ts",
+      "./src/controllers/user.controller.ts",
       "./src/controllers/index.ts"
     ]
   },
